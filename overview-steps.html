@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>ExecutionResult</td>
+        <td>1</td>
+      <td>06 Feb 2022, 20:27</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">CopyBarrierSteps.closeBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="74941830">0.074</td>
+              <td class="duration" data-value="74941830">0.074</td>
+              <td class="duration" data-value="74941830">0.074</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyBarrierSteps.iAmLoggedInAndOnTheBarriersPageForCopy()</td>
+              <td>1</td>
+              <td class="duration" data-value="18546851885">18.546</td>
+              <td class="duration" data-value="18546851885">18.546</td>
+              <td class="duration" data-value="18546851885">18.546</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyBarrierSteps.iClickOnCopyBarrierButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2304671147">2.304</td>
+              <td class="duration" data-value="2304671147">2.304</td>
+              <td class="duration" data-value="2304671147">2.304</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyBarrierSteps.iSearchForTheBarrierForCopy(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5248399469">5.248</td>
+              <td class="duration" data-value="5248399469">5.248</td>
+              <td class="duration" data-value="5248399469">5.248</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyBarrierSteps.screenshot(Scenario)</td>
+              <td>1</td>
+              <td class="duration" data-value="229377474">0.229</td>
+              <td class="duration" data-value="229377474">0.229</td>
+              <td class="duration" data-value="229377474">0.229</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyBarrierSteps.setUp()</td>
+              <td>1</td>
+              <td class="duration" data-value="894484588">0.894</td>
+              <td class="duration" data-value="894484588">0.894</td>
+              <td class="duration" data-value="894484588">0.894</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyBarrierSteps.theBarrierIsCopiedSuccessfully(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="73454872">0.073</td>
+              <td class="duration" data-value="73454872">0.073</td>
+              <td class="duration" data-value="73454872">0.073</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyRiskDiagramSteps.closeBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="75814865">0.075</td>
+              <td class="duration" data-value="75814865">0.075</td>
+              <td class="duration" data-value="75814865">0.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyRiskDiagramSteps.iAmLoggedInAndOnTheRiskDiagramPageForCopy()</td>
+              <td>1</td>
+              <td class="duration" data-value="16085979430">16.085</td>
+              <td class="duration" data-value="16085979430">16.085</td>
+              <td class="duration" data-value="16085979430">16.085</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyRiskDiagramSteps.iClickOnCopyRiskDiagramButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2304653409">2.304</td>
+              <td class="duration" data-value="2304653409">2.304</td>
+              <td class="duration" data-value="2304653409">2.304</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyRiskDiagramSteps.iSearchForTheRiskDiagram(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5160580301">5.160</td>
+              <td class="duration" data-value="5160580301">5.160</td>
+              <td class="duration" data-value="5160580301">5.160</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyRiskDiagramSteps.screenshot(Scenario)</td>
+              <td>1</td>
+              <td class="duration" data-value="205437798">0.205</td>
+              <td class="duration" data-value="205437798">0.205</td>
+              <td class="duration" data-value="205437798">0.205</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyRiskDiagramSteps.setUp()</td>
+              <td>1</td>
+              <td class="duration" data-value="492454083">0.492</td>
+              <td class="duration" data-value="492454083">0.492</td>
+              <td class="duration" data-value="492454083">0.492</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CopyRiskDiagramSteps.theRiskDiagramIsCopiedSuccessfully(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5041143690">5.041</td>
+              <td class="duration" data-value="5041143690">5.041</td>
+              <td class="duration" data-value="5041143690">5.041</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.closeBrowser()</td>
+              <td>3</td>
+              <td class="duration" data-value="76985220">0.076</td>
+              <td class="duration" data-value="76985220">0.079</td>
+              <td class="duration" data-value="230955662">0.230</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.iAmLoggedInAndOnTheBarriersPage()</td>
+              <td>3</td>
+              <td class="duration" data-value="13172842418">13.172</td>
+              <td class="duration" data-value="13172842418">15.514</td>
+              <td class="duration" data-value="39518527255">39.518</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.iCheckThatAllFieldsInTheNewBarrierPageAreEmpty()</td>
+              <td>3</td>
+              <td class="duration" data-value="208330703">0.208</td>
+              <td class="duration" data-value="208330703">0.228</td>
+              <td class="duration" data-value="624992109">0.624</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.iClickOnCreateBarrier()</td>
+              <td>1</td>
+              <td class="duration" data-value="43930244">0.043</td>
+              <td class="duration" data-value="43930244">0.043</td>
+              <td class="duration" data-value="43930244">0.043</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.iClickOnNewBarrier()</td>
+              <td>3</td>
+              <td class="duration" data-value="115797780">0.115</td>
+              <td class="duration" data-value="115797780">0.151</td>
+              <td class="duration" data-value="347393340">0.347</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.iProvideAGenericNameForTheBarrier()</td>
+              <td>1</td>
+              <td class="duration" data-value="179241257">0.179</td>
+              <td class="duration" data-value="179241257">0.179</td>
+              <td class="duration" data-value="179241257">0.179</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.iProvideAOversizedNameForTheBarrier()</td>
+              <td>1</td>
+              <td class="duration" data-value="1136779507">1.136</td>
+              <td class="duration" data-value="1136779507">1.136</td>
+              <td class="duration" data-value="1136779507">1.136</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.iSelectAGenericEquipmentForTheBarrier()</td>
+              <td>3</td>
+              <td class="duration" data-value="2238527638">2.238</td>
+              <td class="duration" data-value="2238527638">2.280</td>
+              <td class="duration" data-value="6715582915">6.715</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.screenshot(Scenario)</td>
+              <td>3</td>
+              <td class="duration" data-value="253094582">0.253</td>
+              <td class="duration" data-value="253094582">0.337</td>
+              <td class="duration" data-value="759283748">0.759</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.setUp()</td>
+              <td>3</td>
+              <td class="duration" data-value="676470069">0.676</td>
+              <td class="duration" data-value="676470069">0.858</td>
+              <td class="duration" data-value="2029410209">2.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.theBarrierIsCreatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="600587975">0.600</td>
+              <td class="duration" data-value="600587975">0.600</td>
+              <td class="duration" data-value="600587975">0.600</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.theCreateBarrierButtonWillBeDisabled()</td>
+              <td>1</td>
+              <td class="duration" data-value="153053478">0.153</td>
+              <td class="duration" data-value="153053478">0.153</td>
+              <td class="duration" data-value="153053478">0.153</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBarrierSteps.theOversizedBarrierNameWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="5029667161">5.029</td>
+              <td class="duration" data-value="5029667161">5.029</td>
+              <td class="duration" data-value="5029667161">5.029</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.closeBrowser()</td>
+              <td>7</td>
+              <td class="duration" data-value="76758000">0.076</td>
+              <td class="duration" data-value="76758000">0.082</td>
+              <td class="duration" data-value="537306002">0.537</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.iAmLoggedInAndOnTheBowtiePage()</td>
+              <td>7</td>
+              <td class="duration" data-value="11726717950">11.726</td>
+              <td class="duration" data-value="11726717950">13.644</td>
+              <td class="duration" data-value="82087025653">1:22.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.iAmNotifiedThatThereIsAlreadyABowtieWithThisBowtieCode()</td>
+              <td>1</td>
+              <td class="duration" data-value="1096410090">1.096</td>
+              <td class="duration" data-value="1096410090">1.096</td>
+              <td class="duration" data-value="1096410090">1.096</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.iCheckThatAllFieldsInTheNewBowtiePageAreEmpty()</td>
+              <td>7</td>
+              <td class="duration" data-value="409914603">0.409</td>
+              <td class="duration" data-value="409914603">0.545</td>
+              <td class="duration" data-value="2869402226">2.869</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.iClickOnCreateBowtie()</td>
+              <td>2</td>
+              <td class="duration" data-value="68132094">0.068</td>
+              <td class="duration" data-value="68132094">0.069</td>
+              <td class="duration" data-value="136264188">0.136</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.iClickOnNewBowtie()</td>
+              <td>7</td>
+              <td class="duration" data-value="108291185">0.108</td>
+              <td class="duration" data-value="108291185">0.136</td>
+              <td class="duration" data-value="758038298">0.758</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.iEnterAGenericBowtieCodeForTheBowtie()</td>
+              <td>4</td>
+              <td class="duration" data-value="146636142">0.146</td>
+              <td class="duration" data-value="146636142">0.195</td>
+              <td class="duration" data-value="586544571">0.586</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.iInformTheBowtieCodeForTheBowtie(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="127576350">0.127</td>
+              <td class="duration" data-value="127576350">0.127</td>
+              <td class="duration" data-value="127576350">0.127</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.iProvideAOversizedBowtieCodeForTheBowtie()</td>
+              <td>1</td>
+              <td class="duration" data-value="118262112">0.118</td>
+              <td class="duration" data-value="118262112">0.118</td>
+              <td class="duration" data-value="118262112">0.118</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.iSelectAGenericEquipmentForTheBowtie()</td>
+              <td>6</td>
+              <td class="duration" data-value="5168406024">5.168</td>
+              <td class="duration" data-value="5168406024">5.214</td>
+              <td class="duration" data-value="31010436146">31.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.iSelectAGenericOperationForTheBowtie()</td>
+              <td>6</td>
+              <td class="duration" data-value="2168667852">2.168</td>
+              <td class="duration" data-value="2168667852">2.191</td>
+              <td class="duration" data-value="13012007116">13.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.iSelectAGenericRiskDiagramForTheBowtie()</td>
+              <td>5</td>
+              <td class="duration" data-value="2142130894">2.142</td>
+              <td class="duration" data-value="2142130894">2.182</td>
+              <td class="duration" data-value="10710654470">10.710</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.screenshot(Scenario)</td>
+              <td>7</td>
+              <td class="duration" data-value="205524316">0.205</td>
+              <td class="duration" data-value="205524316">0.270</td>
+              <td class="duration" data-value="1438670212">1.438</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.setUp()</td>
+              <td>7</td>
+              <td class="duration" data-value="578371789">0.578</td>
+              <td class="duration" data-value="578371789">0.818</td>
+              <td class="duration" data-value="4048602524">4.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.theBowtieIsCreatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="1070641141">1.070</td>
+              <td class="duration" data-value="1070641141">1.070</td>
+              <td class="duration" data-value="1070641141">1.070</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.theCreateBowtieButtonWillBeDisabled()</td>
+              <td>4</td>
+              <td class="duration" data-value="59316517">0.059</td>
+              <td class="duration" data-value="59316517">0.083</td>
+              <td class="duration" data-value="237266069">0.237</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateBowtieSteps.theOversizedBowtieCodeWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="42134819">0.042</td>
+              <td class="duration" data-value="42134819">0.042</td>
+              <td class="duration" data-value="42134819">0.042</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.closeBrowser()</td>
+              <td>11</td>
+              <td class="duration" data-value="78554640">0.078</td>
+              <td class="duration" data-value="78554640">0.088</td>
+              <td class="duration" data-value="864101042">0.864</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iAmLoggedInAndOnTheEquipmentsPage()</td>
+              <td>11</td>
+              <td class="duration" data-value="12613700339">12.613</td>
+              <td class="duration" data-value="12613700339">18.708</td>
+              <td class="duration" data-value="138750703738">2:18.750</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iCheckThatAllFieldsInTheNewEquipmentPageAreEmpty()</td>
+              <td>11</td>
+              <td class="duration" data-value="311536341">0.311</td>
+              <td class="duration" data-value="311536341">0.871</td>
+              <td class="duration" data-value="3426899753">3.426</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iClickOnCreateEquipment()</td>
+              <td>3</td>
+              <td class="duration" data-value="5060359904">5.060</td>
+              <td class="duration" data-value="5060359904">5.073</td>
+              <td class="duration" data-value="15181079714">15.181</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iClickOnNewEquipment()</td>
+              <td>11</td>
+              <td class="duration" data-value="139288706">0.139</td>
+              <td class="duration" data-value="139288706">0.231</td>
+              <td class="duration" data-value="1532175776">1.532</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iEnterAGenericDescriptionForTheEquipment()</td>
+              <td>6</td>
+              <td class="duration" data-value="3230934928">3.230</td>
+              <td class="duration" data-value="3230934928">3.284</td>
+              <td class="duration" data-value="19385609569">19.385</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iEnterAGenericEquipmentCodeForTheEquipment()</td>
+              <td>6</td>
+              <td class="duration" data-value="3247554458">3.247</td>
+              <td class="duration" data-value="3247554458">3.306</td>
+              <td class="duration" data-value="19485326749">19.485</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iEnterAGenericNameForTheEquipment()</td>
+              <td>6</td>
+              <td class="duration" data-value="3288929837">3.288</td>
+              <td class="duration" data-value="3288929837">3.387</td>
+              <td class="duration" data-value="19733579024">19.733</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iEnterAGenericResponsableForTheEquipment()</td>
+              <td>6</td>
+              <td class="duration" data-value="3265295329">3.265</td>
+              <td class="duration" data-value="3265295329">3.348</td>
+              <td class="duration" data-value="19591771975">19.591</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iProvideAOversizedDescriptionForTheEquipment()</td>
+              <td>1</td>
+              <td class="duration" data-value="3602566668">3.602</td>
+              <td class="duration" data-value="3602566668">3.602</td>
+              <td class="duration" data-value="3602566668">3.602</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iProvideAOversizedNameForTheEquipment()</td>
+              <td>1</td>
+              <td class="duration" data-value="3306867388">3.306</td>
+              <td class="duration" data-value="3306867388">3.306</td>
+              <td class="duration" data-value="3306867388">3.306</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iProvideAOversizedNameForTheEquipmentCode()</td>
+              <td>1</td>
+              <td class="duration" data-value="3327628223">3.327</td>
+              <td class="duration" data-value="3327628223">3.327</td>
+              <td class="duration" data-value="3327628223">3.327</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iProvideAOversizedResponsableForTheEquipment()</td>
+              <td>1</td>
+              <td class="duration" data-value="3522009742">3.522</td>
+              <td class="duration" data-value="3522009742">3.522</td>
+              <td class="duration" data-value="3522009742">3.522</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iSelectTheAffiliatedToForTheEquipment()</td>
+              <td>6</td>
+              <td class="duration" data-value="2183128435">2.183</td>
+              <td class="duration" data-value="2183128435">2.263</td>
+              <td class="duration" data-value="13098770610">13.098</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.iSelectTheEquipmentTypeForTheEquipment()</td>
+              <td>6</td>
+              <td class="duration" data-value="2151916406">2.151</td>
+              <td class="duration" data-value="2151916406">2.257</td>
+              <td class="duration" data-value="12911498436">12.911</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.screenshot(Scenario)</td>
+              <td>11</td>
+              <td class="duration" data-value="229064972">0.229</td>
+              <td class="duration" data-value="229064972">0.372</td>
+              <td class="duration" data-value="2519714693">2.519</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.setUp()</td>
+              <td>11</td>
+              <td class="duration" data-value="551362277">0.551</td>
+              <td class="duration" data-value="551362277">0.726</td>
+              <td class="duration" data-value="6064985051">6.064</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.theCreateEquipmentButtonWillBeDisabled()</td>
+              <td>4</td>
+              <td class="duration" data-value="85470418">0.085</td>
+              <td class="duration" data-value="85470418">0.149</td>
+              <td class="duration" data-value="341881673">0.341</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.theEquipmentIsCreatedSuccessfully()</td>
+              <td>3</td>
+              <td class="duration" data-value="5132747270">5.132</td>
+              <td class="duration" data-value="5132747270">5.160</td>
+              <td class="duration" data-value="15398241811">15.398</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.theOversizedEquipmentCodeWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="30249395">0.030</td>
+              <td class="duration" data-value="30249395">0.030</td>
+              <td class="duration" data-value="30249395">0.030</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.theOversizedEquipmentDescriptionWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="26530946">0.026</td>
+              <td class="duration" data-value="26530946">0.026</td>
+              <td class="duration" data-value="26530946">0.026</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.theOversizedEquipmentNameWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="25408911">0.025</td>
+              <td class="duration" data-value="25408911">0.025</td>
+              <td class="duration" data-value="25408911">0.025</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateEquipmentSteps.theOversizedEquipmentResponsableWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="36944511">0.036</td>
+              <td class="duration" data-value="36944511">0.036</td>
+              <td class="duration" data-value="36944511">0.036</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.closeBrowser()</td>
+              <td>7</td>
+              <td class="duration" data-value="77770558">0.077</td>
+              <td class="duration" data-value="77770558">0.083</td>
+              <td class="duration" data-value="544393910">0.544</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.iAmLoggedInAndOnTheRiskDiagramPage()</td>
+              <td>7</td>
+              <td class="duration" data-value="12180599098">12.180</td>
+              <td class="duration" data-value="12180599098">17.006</td>
+              <td class="duration" data-value="85264193688">1:25.264</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.iAmNotifiedThatThereIsAlreadyADiagramWithThisTopEvent()</td>
+              <td>1</td>
+              <td class="duration" data-value="578579283">0.578</td>
+              <td class="duration" data-value="578579283">0.578</td>
+              <td class="duration" data-value="578579283">0.578</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.iCheckThatAllFieldsInTheNewRiskDiagramPageAreEmpty()</td>
+              <td>7</td>
+              <td class="duration" data-value="283993634">0.283</td>
+              <td class="duration" data-value="283993634">0.368</td>
+              <td class="duration" data-value="1987955440">1.987</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.iClickOnCreateDiagram()</td>
+              <td>2</td>
+              <td class="duration" data-value="5088611755">5.088</td>
+              <td class="duration" data-value="5088611755">5.089</td>
+              <td class="duration" data-value="10177223510">10.177</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.iClickOnNewDiagram()</td>
+              <td>7</td>
+              <td class="duration" data-value="117495136">0.117</td>
+              <td class="duration" data-value="117495136">0.233</td>
+              <td class="duration" data-value="822465956">0.822</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.iEnterAGenericHazardNameForTheDiagram()</td>
+              <td>5</td>
+              <td class="duration" data-value="111984813">0.111</td>
+              <td class="duration" data-value="111984813">0.201</td>
+              <td class="duration" data-value="559924069">0.559</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.iEnterAGenericTopEventNameForTheDiagram()</td>
+              <td>3</td>
+              <td class="duration" data-value="87419854">0.087</td>
+              <td class="duration" data-value="87419854">0.094</td>
+              <td class="duration" data-value="262259562">0.262</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.iEnterAnOversizedHazardNameForTheDiagram()</td>
+              <td>1</td>
+              <td class="duration" data-value="433998599">0.433</td>
+              <td class="duration" data-value="433998599">0.433</td>
+              <td class="duration" data-value="433998599">0.433</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.iEnterAnOversizedTopEventNameForTheDiagram()</td>
+              <td>1</td>
+              <td class="duration" data-value="553846253">0.553</td>
+              <td class="duration" data-value="553846253">0.553</td>
+              <td class="duration" data-value="553846253">0.553</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.iInformTheTopEventForTheDriagram(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="152824247">0.152</td>
+              <td class="duration" data-value="152824247">0.152</td>
+              <td class="duration" data-value="152824247">0.152</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.iSelectAGenericOperationForTheDiagram()</td>
+              <td>4</td>
+              <td class="duration" data-value="2138050669">2.138</td>
+              <td class="duration" data-value="2138050669">2.175</td>
+              <td class="duration" data-value="8552202679">8.552</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.screenshot(Scenario)</td>
+              <td>7</td>
+              <td class="duration" data-value="184276772">0.184</td>
+              <td class="duration" data-value="184276772">0.220</td>
+              <td class="duration" data-value="1289937410">1.289</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.setUp()</td>
+              <td>7</td>
+              <td class="duration" data-value="524802492">0.524</td>
+              <td class="duration" data-value="524802492">0.736</td>
+              <td class="duration" data-value="3673617446">3.673</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.theCreateDiagramButtonWillBeDisabled()</td>
+              <td>3</td>
+              <td class="duration" data-value="60713449">0.060</td>
+              <td class="duration" data-value="60713449">0.086</td>
+              <td class="duration" data-value="182140347">0.182</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.theDiagramIsCreatedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="548317798">0.548</td>
+              <td class="duration" data-value="548317798">0.548</td>
+              <td class="duration" data-value="548317798">0.548</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.theOversizedHazardWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="25521272">0.025</td>
+              <td class="duration" data-value="25521272">0.025</td>
+              <td class="duration" data-value="25521272">0.025</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">CreateRiskDiagramSteps.theOversizedTopEventWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="25325194">0.025</td>
+              <td class="duration" data-value="25325194">0.025</td>
+              <td class="duration" data-value="25325194">0.025</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBarrierSteps.closeBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="73618368">0.073</td>
+              <td class="duration" data-value="73618368">0.073</td>
+              <td class="duration" data-value="73618368">0.073</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBarrierSteps.iAmLoggedInAndOnTheBarriersPageForDeletion()</td>
+              <td>1</td>
+              <td class="duration" data-value="16490233732">16.490</td>
+              <td class="duration" data-value="16490233732">16.490</td>
+              <td class="duration" data-value="16490233732">16.490</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBarrierSteps.iClickOnConfirmBarrierDeletion()</td>
+              <td>1</td>
+              <td class="duration" data-value="46095910">0.046</td>
+              <td class="duration" data-value="46095910">0.046</td>
+              <td class="duration" data-value="46095910">0.046</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBarrierSteps.iClickOnDeleteBarrier()</td>
+              <td>1</td>
+              <td class="duration" data-value="2237545805">2.237</td>
+              <td class="duration" data-value="2237545805">2.237</td>
+              <td class="duration" data-value="2237545805">2.237</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBarrierSteps.iProvideTheTextForTheBarrierDeletionDialog(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="90762546">0.090</td>
+              <td class="duration" data-value="90762546">0.090</td>
+              <td class="duration" data-value="90762546">0.090</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBarrierSteps.screenshot(Scenario)</td>
+              <td>1</td>
+              <td class="duration" data-value="188323138">0.188</td>
+              <td class="duration" data-value="188323138">0.188</td>
+              <td class="duration" data-value="188323138">0.188</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBarrierSteps.setUp()</td>
+              <td>1</td>
+              <td class="duration" data-value="893897598">0.893</td>
+              <td class="duration" data-value="893897598">0.893</td>
+              <td class="duration" data-value="893897598">0.893</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBarrierSteps.theBarrierIsDeletedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="641679828">0.641</td>
+              <td class="duration" data-value="641679828">0.641</td>
+              <td class="duration" data-value="641679828">0.641</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBowtieSteps.closeBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="117294388">0.117</td>
+              <td class="duration" data-value="117294388">0.117</td>
+              <td class="duration" data-value="117294388">0.117</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBowtieSteps.iAmLoggedInAndOnTheBowtiePageForDeletion()</td>
+              <td>1</td>
+              <td class="duration" data-value="10143183024">10.143</td>
+              <td class="duration" data-value="10143183024">10.143</td>
+              <td class="duration" data-value="10143183024">10.143</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBowtieSteps.iClickOnConfirmBowtieDeletion()</td>
+              <td>1</td>
+              <td class="duration" data-value="57469359">0.057</td>
+              <td class="duration" data-value="57469359">0.057</td>
+              <td class="duration" data-value="57469359">0.057</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBowtieSteps.iClickOnDeleteBowtie()</td>
+              <td>1</td>
+              <td class="duration" data-value="2243810772">2.243</td>
+              <td class="duration" data-value="2243810772">2.243</td>
+              <td class="duration" data-value="2243810772">2.243</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBowtieSteps.iProvideTheTextForTheBowtieDeletionDialog(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="186722315">0.186</td>
+              <td class="duration" data-value="186722315">0.186</td>
+              <td class="duration" data-value="186722315">0.186</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBowtieSteps.screenshot(Scenario)</td>
+              <td>1</td>
+              <td class="duration" data-value="136188739">0.136</td>
+              <td class="duration" data-value="136188739">0.136</td>
+              <td class="duration" data-value="136188739">0.136</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBowtieSteps.setUp()</td>
+              <td>1</td>
+              <td class="duration" data-value="646616129">0.646</td>
+              <td class="duration" data-value="646616129">0.646</td>
+              <td class="duration" data-value="646616129">0.646</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteBowtieSteps.theBowtieIsDeletedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="726316206">0.726</td>
+              <td class="duration" data-value="726316206">0.726</td>
+              <td class="duration" data-value="726316206">0.726</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteRiskDiagramSteps.closeBrowser()</td>
+              <td>1</td>
+              <td class="duration" data-value="81979558">0.081</td>
+              <td class="duration" data-value="81979558">0.081</td>
+              <td class="duration" data-value="81979558">0.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteRiskDiagramSteps.iAmLoggedInAndOnTheRiskDiagramPageForDeletion()</td>
+              <td>1</td>
+              <td class="duration" data-value="10612641892">10.612</td>
+              <td class="duration" data-value="10612641892">10.612</td>
+              <td class="duration" data-value="10612641892">10.612</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteRiskDiagramSteps.iClickOnConfirmRiskDiagramDeletion()</td>
+              <td>1</td>
+              <td class="duration" data-value="44219505">0.044</td>
+              <td class="duration" data-value="44219505">0.044</td>
+              <td class="duration" data-value="44219505">0.044</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteRiskDiagramSteps.iClickOnDeleteRiskDiagram()</td>
+              <td>1</td>
+              <td class="duration" data-value="2295273721">2.295</td>
+              <td class="duration" data-value="2295273721">2.295</td>
+              <td class="duration" data-value="2295273721">2.295</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteRiskDiagramSteps.iProvideTheTextForTheRiskDiagramDeletionDialog(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="196313707">0.196</td>
+              <td class="duration" data-value="196313707">0.196</td>
+              <td class="duration" data-value="196313707">0.196</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteRiskDiagramSteps.screenshot(Scenario)</td>
+              <td>1</td>
+              <td class="duration" data-value="311178091">0.311</td>
+              <td class="duration" data-value="311178091">0.311</td>
+              <td class="duration" data-value="311178091">0.311</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteRiskDiagramSteps.setUp()</td>
+              <td>1</td>
+              <td class="duration" data-value="738776948">0.738</td>
+              <td class="duration" data-value="738776948">0.738</td>
+              <td class="duration" data-value="738776948">0.738</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">DeleteRiskDiagramSteps.theRiskDiagramIsDeletedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="553987527">0.553</td>
+              <td class="duration" data-value="553987527">0.553</td>
+              <td class="duration" data-value="553987527">0.553</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.closeBrowser()</td>
+              <td>3</td>
+              <td class="duration" data-value="76037291">0.076</td>
+              <td class="duration" data-value="76037291">0.076</td>
+              <td class="duration" data-value="228111874">0.228</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.iAmLoggedInAndOnTheBarriersPageForEdition()</td>
+              <td>3</td>
+              <td class="duration" data-value="12455857945">12.455</td>
+              <td class="duration" data-value="12455857945">17.442</td>
+              <td class="duration" data-value="37367573837">37.367</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.iClearTheBarrierName()</td>
+              <td>1</td>
+              <td class="duration" data-value="8232432824">8.232</td>
+              <td class="duration" data-value="8232432824">8.232</td>
+              <td class="duration" data-value="8232432824">8.232</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.iClickOnBarrierEditionCard()</td>
+              <td>3</td>
+              <td class="duration" data-value="690973775">0.690</td>
+              <td class="duration" data-value="690973775">0.703</td>
+              <td class="duration" data-value="2072921327">2.072</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.iClickOnEditionBarrierButton()</td>
+              <td>3</td>
+              <td class="duration" data-value="2299639812">2.299</td>
+              <td class="duration" data-value="2299639812">2.316</td>
+              <td class="duration" data-value="6898919438">6.898</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.iClickOnSaveBarrier()</td>
+              <td>1</td>
+              <td class="duration" data-value="57288639">0.057</td>
+              <td class="duration" data-value="57288639">0.057</td>
+              <td class="duration" data-value="57288639">0.057</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.iProvideAOversizedNameForTheBarrierEdition()</td>
+              <td>1</td>
+              <td class="duration" data-value="3443573336">3.443</td>
+              <td class="duration" data-value="3443573336">3.443</td>
+              <td class="duration" data-value="3443573336">3.443</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.iSearchForTheBarrier(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="5278502697">5.278</td>
+              <td class="duration" data-value="5278502697">5.373</td>
+              <td class="duration" data-value="15835508091">15.835</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.iSelectAGenericCriticalityForTheBarrier()</td>
+              <td>2</td>
+              <td class="duration" data-value="2172659644">2.172</td>
+              <td class="duration" data-value="2172659644">2.189</td>
+              <td class="duration" data-value="4345319288">4.345</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.iSelectAGenericResponsableForTheBarrier()</td>
+              <td>2</td>
+              <td class="duration" data-value="2190162935">2.190</td>
+              <td class="duration" data-value="2190162935">2.192</td>
+              <td class="duration" data-value="4380325871">4.380</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.iSelectAGenericTypeForTheBarrier()</td>
+              <td>2</td>
+              <td class="duration" data-value="2156006849">2.156</td>
+              <td class="duration" data-value="2156006849">2.180</td>
+              <td class="duration" data-value="4312013699">4.312</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.iSelectAGenericUpdateModeForTheBarrier()</td>
+              <td>2</td>
+              <td class="duration" data-value="2158839555">2.158</td>
+              <td class="duration" data-value="2158839555">2.165</td>
+              <td class="duration" data-value="4317679111">4.317</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.screenshot(Scenario)</td>
+              <td>3</td>
+              <td class="duration" data-value="185970526">0.185</td>
+              <td class="duration" data-value="185970526">0.268</td>
+              <td class="duration" data-value="557911579">0.557</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.setUp()</td>
+              <td>3</td>
+              <td class="duration" data-value="738953929">0.738</td>
+              <td class="duration" data-value="738953929">0.905</td>
+              <td class="duration" data-value="2216861788">2.216</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.theBarrierIsSavedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="572071898">0.572</td>
+              <td class="duration" data-value="572071898">0.572</td>
+              <td class="duration" data-value="572071898">0.572</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.theOversizedBarrierEditionNameWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="53366440">0.053</td>
+              <td class="duration" data-value="53366440">0.053</td>
+              <td class="duration" data-value="53366440">0.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBarrierSteps.theSaveBarrierEditionButtonWillBeDisabled()</td>
+              <td>1</td>
+              <td class="duration" data-value="43527098">0.043</td>
+              <td class="duration" data-value="43527098">0.043</td>
+              <td class="duration" data-value="43527098">0.043</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.closeBrowser()</td>
+              <td>2</td>
+              <td class="duration" data-value="77160959">0.077</td>
+              <td class="duration" data-value="77160959">0.080</td>
+              <td class="duration" data-value="154321918">0.154</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iAmLoggedInAndOnTheBowtiePageForEdition()</td>
+              <td>2</td>
+              <td class="duration" data-value="11162268065">11.162</td>
+              <td class="duration" data-value="11162268065">11.209</td>
+              <td class="duration" data-value="22324536131">22.324</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iClickOnAddMitigationBarrierButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="5223181359">5.223</td>
+              <td class="duration" data-value="5223181359">5.223</td>
+              <td class="duration" data-value="5223181359">5.223</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iClickOnAddThreatBarrierButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="5323047207">5.323</td>
+              <td class="duration" data-value="5323047207">5.323</td>
+              <td class="duration" data-value="5323047207">5.323</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iClickOnEditBowtieButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="624456158">0.624</td>
+              <td class="duration" data-value="624456158">0.624</td>
+              <td class="duration" data-value="624456158">0.624</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iClickOnEditionBowtieButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="2343631102">2.343</td>
+              <td class="duration" data-value="2343631102">2.355</td>
+              <td class="duration" data-value="4687262205">4.687</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iClickOnSaveBowtieButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="3069052671">3.069</td>
+              <td class="duration" data-value="3069052671">3.069</td>
+              <td class="duration" data-value="3069052671">3.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iCloseTheMitigationBarrierEditionCard()</td>
+              <td>1</td>
+              <td class="duration" data-value="62176867">0.062</td>
+              <td class="duration" data-value="62176867">0.062</td>
+              <td class="duration" data-value="62176867">0.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iCloseTheThreatBarrierEditionCard()</td>
+              <td>1</td>
+              <td class="duration" data-value="74620582">0.074</td>
+              <td class="duration" data-value="74620582">0.074</td>
+              <td class="duration" data-value="74620582">0.074</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iEnterAnOversizedBowtieCodeForTheBowtie()</td>
+              <td>1</td>
+              <td class="duration" data-value="3468390347">3.468</td>
+              <td class="duration" data-value="3468390347">3.468</td>
+              <td class="duration" data-value="3468390347">3.468</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iSearchForTheBowtie(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="5168158898">5.168</td>
+              <td class="duration" data-value="5168158898">5.188</td>
+              <td class="duration" data-value="10336317796">10.336</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iSelectAGenericBarrierForTheMitigationBarrier()</td>
+              <td>1</td>
+              <td class="duration" data-value="3155514634">3.155</td>
+              <td class="duration" data-value="3155514634">3.155</td>
+              <td class="duration" data-value="3155514634">3.155</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iSelectAGenericBarrierForTheThreatBarrier()</td>
+              <td>1</td>
+              <td class="duration" data-value="3150903112">3.150</td>
+              <td class="duration" data-value="3150903112">3.150</td>
+              <td class="duration" data-value="3150903112">3.150</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iSelectAGenericTypeForTheMitigationBarrier()</td>
+              <td>1</td>
+              <td class="duration" data-value="4169053719">4.169</td>
+              <td class="duration" data-value="4169053719">4.169</td>
+              <td class="duration" data-value="4169053719">4.169</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.iSelectAGenericTypeForTheThreatBarrier()</td>
+              <td>1</td>
+              <td class="duration" data-value="3200423490">3.200</td>
+              <td class="duration" data-value="3200423490">3.200</td>
+              <td class="duration" data-value="3200423490">3.200</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.screenshot(Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="249436907">0.249</td>
+              <td class="duration" data-value="249436907">0.259</td>
+              <td class="duration" data-value="498873814">0.498</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.setUp()</td>
+              <td>2</td>
+              <td class="duration" data-value="603790980">0.603</td>
+              <td class="duration" data-value="603790980">0.608</td>
+              <td class="duration" data-value="1207581961">1.207</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.theBowtieIsSavedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="1080300362">1.080</td>
+              <td class="duration" data-value="1080300362">1.080</td>
+              <td class="duration" data-value="1080300362">1.080</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditBowtieSteps.theOversizesBowtieCodeWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="35105492">0.035</td>
+              <td class="duration" data-value="35105492">0.035</td>
+              <td class="duration" data-value="35105492">0.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.closeBrowser()</td>
+              <td>4</td>
+              <td class="duration" data-value="85489579">0.085</td>
+              <td class="duration" data-value="85489579">0.100</td>
+              <td class="duration" data-value="341958319">0.341</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.iAmLoggedInAndOnTheEquipmentsPageForEdition()</td>
+              <td>4</td>
+              <td class="duration" data-value="11851456734">11.851</td>
+              <td class="duration" data-value="11851456734">14.093</td>
+              <td class="duration" data-value="47405826939">47.405</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.iClearTheCodeOnEquipmentEdition()</td>
+              <td>1</td>
+              <td class="duration" data-value="3308641077">3.308</td>
+              <td class="duration" data-value="3308641077">3.308</td>
+              <td class="duration" data-value="3308641077">3.308</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.iClearTheNameOnEquipmentEdition()</td>
+              <td>1</td>
+              <td class="duration" data-value="3201785732">3.201</td>
+              <td class="duration" data-value="3201785732">3.201</td>
+              <td class="duration" data-value="3201785732">3.201</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.iClearTheResponsableOnEquipmentEdition()</td>
+              <td>1</td>
+              <td class="duration" data-value="3205746348">3.205</td>
+              <td class="duration" data-value="3205746348">3.205</td>
+              <td class="duration" data-value="3205746348">3.205</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.iClickOnEditionEquipmentButton()</td>
+              <td>4</td>
+              <td class="duration" data-value="5143631777">5.143</td>
+              <td class="duration" data-value="5143631777">5.204</td>
+              <td class="duration" data-value="20574527111">20.574</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.iClickOnSaveEquipmentEdition()</td>
+              <td>1</td>
+              <td class="duration" data-value="122337033">0.122</td>
+              <td class="duration" data-value="122337033">0.122</td>
+              <td class="duration" data-value="122337033">0.122</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.iEnterAGenericDescriptionForTheEquipmentEdition()</td>
+              <td>1</td>
+              <td class="duration" data-value="3434539510">3.434</td>
+              <td class="duration" data-value="3434539510">3.434</td>
+              <td class="duration" data-value="3434539510">3.434</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.iEnterAGenericEquipmentCodeForTheEquipmentEdition()</td>
+              <td>1</td>
+              <td class="duration" data-value="3348062312">3.348</td>
+              <td class="duration" data-value="3348062312">3.348</td>
+              <td class="duration" data-value="3348062312">3.348</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.iEnterAGenericNameForTheEquipmentEdition()</td>
+              <td>1</td>
+              <td class="duration" data-value="3293209013">3.293</td>
+              <td class="duration" data-value="3293209013">3.293</td>
+              <td class="duration" data-value="3293209013">3.293</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.iEnterAGenericResponsableForTheEquipmentEdition()</td>
+              <td>1</td>
+              <td class="duration" data-value="3248244405">3.248</td>
+              <td class="duration" data-value="3248244405">3.248</td>
+              <td class="duration" data-value="3248244405">3.248</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.screenshot(Scenario)</td>
+              <td>4</td>
+              <td class="duration" data-value="180473104">0.180</td>
+              <td class="duration" data-value="180473104">0.191</td>
+              <td class="duration" data-value="721892416">0.721</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.setUp()</td>
+              <td>4</td>
+              <td class="duration" data-value="596775864">0.596</td>
+              <td class="duration" data-value="596775864">0.651</td>
+              <td class="duration" data-value="2387103458">2.387</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.theEquipmentIsSavedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="5071843635">5.071</td>
+              <td class="duration" data-value="5071843635">5.071</td>
+              <td class="duration" data-value="5071843635">5.071</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditEquipmentSteps.theSaveEquipmentButtonIsDisabled()</td>
+              <td>3</td>
+              <td class="duration" data-value="47322292">0.047</td>
+              <td class="duration" data-value="47322292">0.056</td>
+              <td class="duration" data-value="141966877">0.141</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.closeBrowser()</td>
+              <td>8</td>
+              <td class="duration" data-value="76156365">0.076</td>
+              <td class="duration" data-value="76156365">0.078</td>
+              <td class="duration" data-value="609250923">0.609</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iAmLoggedInAndOnTheRiskDiagramPageForEdition()</td>
+              <td>8</td>
+              <td class="duration" data-value="12339163409">12.339</td>
+              <td class="duration" data-value="12339163409">18.238</td>
+              <td class="duration" data-value="98713307273">1:38.713</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iAmNotifiedThatATopEventWithSameNameAlreadyExists()</td>
+              <td>1</td>
+              <td class="duration" data-value="584959320">0.584</td>
+              <td class="duration" data-value="584959320">0.584</td>
+              <td class="duration" data-value="584959320">0.584</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iClickOnConsequenceEditionCard()</td>
+              <td>5</td>
+              <td class="duration" data-value="3150981141">3.150</td>
+              <td class="duration" data-value="3150981141">3.234</td>
+              <td class="duration" data-value="15754905706">15.754</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iClickOnEditionDiagramButton()</td>
+              <td>8</td>
+              <td class="duration" data-value="2351630989">2.351</td>
+              <td class="duration" data-value="2351630989">2.437</td>
+              <td class="duration" data-value="18813047916">18.813</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iClickOnHazardEditionCard()</td>
+              <td>1</td>
+              <td class="duration" data-value="618890663">0.618</td>
+              <td class="duration" data-value="618890663">0.618</td>
+              <td class="duration" data-value="618890663">0.618</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iClickOnSaveDiagramButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="101404594">0.101</td>
+              <td class="duration" data-value="101404594">0.137</td>
+              <td class="duration" data-value="202809188">0.202</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iClickOnThreatEditionCard()</td>
+              <td>5</td>
+              <td class="duration" data-value="3180382105">3.180</td>
+              <td class="duration" data-value="3180382105">3.235</td>
+              <td class="duration" data-value="15901910527">15.901</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iClickOnTopEventEditionCard()</td>
+              <td>2</td>
+              <td class="duration" data-value="591578943">0.591</td>
+              <td class="duration" data-value="591578943">0.595</td>
+              <td class="duration" data-value="1183157887">1.183</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iCloseTheConsequenceEditionCard()</td>
+              <td>4</td>
+              <td class="duration" data-value="121143028">0.121</td>
+              <td class="duration" data-value="121143028">0.148</td>
+              <td class="duration" data-value="484572114">0.484</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iCloseTheThreatEditionCard()</td>
+              <td>4</td>
+              <td class="duration" data-value="69395676">0.069</td>
+              <td class="duration" data-value="69395676">0.124</td>
+              <td class="duration" data-value="277582704">0.277</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iCloseTheTopEventEditionCard()</td>
+              <td>1</td>
+              <td class="duration" data-value="58080528">0.058</td>
+              <td class="duration" data-value="58080528">0.058</td>
+              <td class="duration" data-value="58080528">0.058</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iProvideAGenericInitialFrequencyForTheThreat()</td>
+              <td>1</td>
+              <td class="duration" data-value="4246636419">4.246</td>
+              <td class="duration" data-value="4246636419">4.246</td>
+              <td class="duration" data-value="4246636419">4.246</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iProvideAGenericNameForTheConsequence()</td>
+              <td>1</td>
+              <td class="duration" data-value="6545845807">6.545</td>
+              <td class="duration" data-value="6545845807">6.545</td>
+              <td class="duration" data-value="6545845807">6.545</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iProvideAGenericNameForTheThreat()</td>
+              <td>1</td>
+              <td class="duration" data-value="4378481041">4.378</td>
+              <td class="duration" data-value="4378481041">4.378</td>
+              <td class="duration" data-value="4378481041">4.378</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iProvideAGenericThresholdFrequencyForTheConsequence()</td>
+              <td>1</td>
+              <td class="duration" data-value="4373009451">4.373</td>
+              <td class="duration" data-value="4373009451">4.373</td>
+              <td class="duration" data-value="4373009451">4.373</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iProvideAThresholdFrequencyOf(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="4773098178">4.773</td>
+              <td class="duration" data-value="4773098178">4.794</td>
+              <td class="duration" data-value="14319294535">14.319</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iProvideAmOversizedNameForTheConsequence()</td>
+              <td>1</td>
+              <td class="duration" data-value="11225238468">11.225</td>
+              <td class="duration" data-value="11225238468">11.225</td>
+              <td class="duration" data-value="11225238468">11.225</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iProvideAmOversizedNameForTheThreat()</td>
+              <td>1</td>
+              <td class="duration" data-value="11418645660">11.418</td>
+              <td class="duration" data-value="11418645660">11.418</td>
+              <td class="duration" data-value="11418645660">11.418</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iProvideAnInitialFrequencyOf(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="4742377461">4.742</td>
+              <td class="duration" data-value="4742377461">4.765</td>
+              <td class="duration" data-value="14227132384">14.227</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iProvideAnOversizedHazardForTheDiagram()</td>
+              <td>1</td>
+              <td class="duration" data-value="11377418373">11.377</td>
+              <td class="duration" data-value="11377418373">11.377</td>
+              <td class="duration" data-value="11377418373">11.377</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iProvideAnOversizedTopEventForTheDiagram()</td>
+              <td>1</td>
+              <td class="duration" data-value="5182664271">5.182</td>
+              <td class="duration" data-value="5182664271">5.182</td>
+              <td class="duration" data-value="5182664271">5.182</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iProvideTheTopEventForTheDiagram(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="6456902448">6.456</td>
+              <td class="duration" data-value="6456902448">6.456</td>
+              <td class="duration" data-value="6456902448">6.456</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.iSearchForTheDiagram(String)</td>
+              <td>8</td>
+              <td class="duration" data-value="5194010245">5.194</td>
+              <td class="duration" data-value="5194010245">5.248</td>
+              <td class="duration" data-value="41552081962">41.552</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.screenshot(Scenario)</td>
+              <td>8</td>
+              <td class="duration" data-value="292521372">0.292</td>
+              <td class="duration" data-value="292521372">0.367</td>
+              <td class="duration" data-value="2340170976">2.340</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.setUp()</td>
+              <td>8</td>
+              <td class="duration" data-value="505085482">0.505</td>
+              <td class="duration" data-value="505085482">0.691</td>
+              <td class="duration" data-value="4040683856">4.040</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.theOversizedConsequenceNameWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="32175705">0.032</td>
+              <td class="duration" data-value="32175705">0.032</td>
+              <td class="duration" data-value="32175705">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.theOversizedHazardNameWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="55648025">0.055</td>
+              <td class="duration" data-value="55648025">0.055</td>
+              <td class="duration" data-value="55648025">0.055</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.theOversizedThreatNameWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="47224249">0.047</td>
+              <td class="duration" data-value="47224249">0.047</td>
+              <td class="duration" data-value="47224249">0.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.theOversizedTopEventNameWillNotAppear()</td>
+              <td>1</td>
+              <td class="duration" data-value="78970719">0.078</td>
+              <td class="duration" data-value="78970719">0.078</td>
+              <td class="duration" data-value="78970719">0.078</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.theRiskDiagramIsSavedSuccessfully()</td>
+              <td>1</td>
+              <td class="duration" data-value="586577729">0.586</td>
+              <td class="duration" data-value="586577729">0.586</td>
+              <td class="duration" data-value="586577729">0.586</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">EditRiskDiagramSteps.theSaveDiagramButtonWillBeDisabled()</td>
+              <td>6</td>
+              <td class="duration" data-value="108590170">0.108</td>
+              <td class="duration" data-value="108590170">0.176</td>
+              <td class="duration" data-value="651541023">0.651</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>192</td>
+            <td>516</td>
+            <td class="duration">2.508</td>
+            <td class="duration">2:18.750</td>
+            <td class="duration">21:34.475</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
